@@ -1,0 +1,192 @@
+[
+  {
+    "file": "app/(dashboard)/dashboard/approval/page.tsx",
+    "renderedTextEqual": true,
+    "apiCallsEqual": true,
+    "eventHandlersEqual": true,
+    "pageLiteralsEqual": true
+  },
+  {
+    "file": "app/(dashboard)/dashboard/checkout/cancel/page.tsx",
+    "renderedTextEqual": true,
+    "apiCallsEqual": true,
+    "eventHandlersEqual": true,
+    "pageLiteralsEqual": true
+  },
+  {
+    "file": "app/(dashboard)/dashboard/checkout/page.tsx",
+    "renderedTextEqual": true,
+    "apiCallsEqual": true,
+    "eventHandlersEqual": true,
+    "pageLiteralsEqual": true
+  },
+  {
+    "file": "app/(dashboard)/dashboard/checkout/success/page.tsx",
+    "renderedTextEqual": true,
+    "apiCallsEqual": true,
+    "eventHandlersEqual": true,
+    "pageLiteralsEqual": true
+  },
+  {
+    "file": "app/(dashboard)/dashboard/inventory/page.tsx",
+    "renderedTextEqual": true,
+    "apiCallsEqual": true,
+    "eventHandlersEqual": true,
+    "pageLiteralsEqual": true
+  },
+  {
+    "file": "app/(dashboard)/dashboard/negotiations/page.tsx",
+    "renderedTextEqual": true,
+    "apiCallsEqual": true,
+    "eventHandlersEqual": true,
+    "pageLiteralsEqual": true
+  },
+  {
+    "file": "app/(dashboard)/dashboard/overview/page.tsx",
+    "renderedTextEqual": true,
+    "apiCallsEqual": true,
+    "eventHandlersEqual": true,
+    "pageLiteralsEqual": true
+  },
+  {
+    "file": "app/(dashboard)/dashboard/page.tsx",
+    "renderedTextEqual": true,
+    "apiCallsEqual": true,
+    "eventHandlersEqual": true,
+    "pageLiteralsEqual": true
+  },
+  {
+    "file": "app/(dashboard)/dashboard/procurement/page.tsx",
+    "renderedTextEqual": true,
+    "apiCallsEqual": true,
+    "eventHandlersEqual": true,
+    "pageLiteralsEqual": true
+  },
+  {
+    "file": "app/(dashboard)/dashboard/settings/page.tsx",
+    "renderedTextEqual": true,
+    "apiCallsEqual": true,
+    "eventHandlersEqual": true,
+    "pageLiteralsEqual": true
+  },
+  {
+    "file": "app/(dashboard)/dashboard/suppliers/page.tsx",
+    "renderedTextEqual": true,
+    "apiCallsEqual": true,
+    "eventHandlersEqual": true,
+    "pageLiteralsEqual": true
+  },
+  {
+    "file": "app/(dashboard)/dashboard/tracking/page.tsx",
+    "renderedTextEqual": true,
+    "apiCallsEqual": true,
+    "eventHandlersEqual": true,
+    "pageLiteralsEqual": true
+  },
+  {
+    "file": "app/(dashboard)/layout.tsx",
+    "renderedTextEqual": true,
+    "apiCallsEqual": true,
+    "eventHandlersEqual": true,
+    "pageLiteralsEqual": true
+  },
+  {
+    "file": "app/auth/signin/page.tsx",
+    "renderedTextEqual": true,
+    "apiCallsEqual": true,
+    "eventHandlersEqual": true,
+    "pageLiteralsEqual": true
+  },
+  {
+    "file": "app/auth/signup/page.tsx",
+    "renderedTextEqual": true,
+    "apiCallsEqual": true,
+    "eventHandlersEqual": true,
+    "pageLiteralsEqual": true
+  },
+  {
+    "file": "app/layout.tsx",
+    "renderedTextEqual": true,
+    "apiCallsEqual": true,
+    "eventHandlersEqual": true
+  },
+  {
+    "file": "app/page.tsx",
+    "renderedTextEqual": true,
+    "apiCallsEqual": true,
+    "eventHandlersEqual": true,
+    "pageLiteralsEqual": true
+  },
+  {
+    "file": "components/landing/Navbar.tsx",
+    "renderedTextEqual": true,
+    "apiCallsEqual": true,
+    "eventHandlersEqual": true
+  },
+  {
+    "file": "components/three/SupplyChain3D.tsx",
+    "renderedTextEqual": true,
+    "apiCallsEqual": true,
+    "eventHandlersEqual": true
+  },
+  {
+    "file": "components/ui/badge.tsx",
+    "renderedTextEqual": true,
+    "apiCallsEqual": true,
+    "eventHandlersEqual": true
+  },
+  {
+    "file": "components/ui/button.tsx",
+    "renderedTextEqual": true,
+    "apiCallsEqual": true,
+    "eventHandlersEqual": true
+  },
+  {
+    "file": "components/ui/card.tsx",
+    "renderedTextEqual": true,
+    "apiCallsEqual": true,
+    "eventHandlersEqual": true
+  },
+  {
+    "file": "components/ui/input.tsx",
+    "renderedTextEqual": true,
+    "apiCallsEqual": true,
+    "eventHandlersEqual": true
+  },
+  {
+    "file": "components/ui/progress.tsx",
+    "renderedTextEqual": true,
+    "apiCallsEqual": true,
+    "eventHandlersEqual": true
+  },
+  {
+    "file": "components/ui/separator.tsx",
+    "renderedTextEqual": true,
+    "apiCallsEqual": true,
+    "eventHandlersEqual": true
+  },
+  {
+    "file": "components/ui/toaster.tsx",
+    "renderedTextEqual": true,
+    "apiCallsEqual": true,
+    "eventHandlersEqual": true
+  },
+  {
+    "file": "lib/api.ts",
+    "renderedTextEqual": true,
+    "apiCallsEqual": true,
+    "eventHandlersEqual": true
+  },
+  {
+    "file": "lib/auth-context.tsx",
+    "renderedTextEqual": true,
+    "apiCallsEqual": true,
+    "eventHandlersEqual": true
+  },
+  {
+    "file": "lib/utils.ts",
+    "renderedTextEqual": true,
+    "apiCallsEqual": true,
+    "eventHandlersEqual": true
+  }
+]

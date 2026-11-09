@@ -1,0 +1,5 @@
+.next/types/app/(dashboard)/dashboard/negotiations/page.ts(8,13): error TS2344: Type 'OmitWithTag<typeof import("/Users/sadhvisakinala/Desktop/supply mind ai/frontend/src/app/(dashboard)/dashboard/negotiations/page"), "metadata" | "default" | "config" | "generateStaticParams" | ... 9 more ... | "generateViewport", "">' does not satisfy the constraint '{ [x: string]: never; }'.
+  Property 'SessionSelector' is incompatible with index signature.
+    Type '({ negotiations, selectedId, selectedSku, onSelectNegotiation, onSelectSku, newQty, setNewQty, targetPrice, setTargetPrice, onStartNegotiation, starting, }: { negotiations: any[]; selectedId: number | null; selectedSku: string; onSelectNegotiation: (id: number) => void; onSelectSku: (sku: string) => void; newQty: nu...' is not assignable to type 'never'.
+src/app/(dashboard)/dashboard/checkout/page.tsx(112,7): error TS18004: No value exists in scope for the shorthand property 'isPending'. Either declare one or provide an initializer.
+src/app/(dashboard)/layout.tsx(90,25): error TS2339: Property 'loading' does not exist on type 'AuthContextType'.

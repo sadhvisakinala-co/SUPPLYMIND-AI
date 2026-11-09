@@ -1,0 +1,45 @@
+
+> frontend@0.1.0 build
+> next build
+
+  ▲ Next.js 14.2.35
+  - Environments: .env.local
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully
+   Skipping validation of types
+   Skipping linting
+   Collecting page data ...
+   Generating static pages (0/19) ...
+   Generating static pages (4/19) 
+   Generating static pages (9/19) 
+   Generating static pages (14/19) 
+ ✓ Generating static pages (19/19)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                              Size     First Load JS
+┌ ○ /                                    160 kB          270 kB
+├ ○ /_not-found                          873 B          88.2 kB
+├ ○ /auth/signin                         2.92 kB         113 kB
+├ ○ /auth/signup                         2.67 kB         113 kB
+├ ○ /dashboard                           138 B          87.5 kB
+├ ○ /dashboard/approval                  5.31 kB         112 kB
+├ ○ /dashboard/checkout                  8.36 kB         115 kB
+├ ○ /dashboard/checkout/cancel           2.42 kB         109 kB
+├ ○ /dashboard/checkout/success          3.61 kB         110 kB
+├ ○ /dashboard/inventory                 6.38 kB         116 kB
+├ ○ /dashboard/negotiations              9.55 kB         119 kB
+├ ○ /dashboard/overview                  6.5 kB          113 kB
+├ ○ /dashboard/procurement               5.73 kB         112 kB
+├ ○ /dashboard/settings                  5.98 kB         103 kB
+├ ○ /dashboard/suppliers                 6.03 kB         113 kB
+└ ○ /dashboard/tracking                  7.47 kB         114 kB
++ First Load JS shared by all            87.3 kB
+  ├ chunks/117-5e6ddc80607d6c1a.js       31.7 kB
+  ├ chunks/fd9d1056-c3b2e0bf7bd7942c.js  53.6 kB
+  └ other shared chunks (total)          1.96 kB
+
+
+○  (Static)  prerendered as static content
+
