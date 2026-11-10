@@ -20,7 +20,18 @@ class PayPalService:
     """Service class for interacting with the PayPal Orders v2 REST API."""
 
     def __init__(self):
-        self.base_url = settings.PAYPAL_BASE_URL.rstrip("/")
+        self.sandbox_mode = bool(settings.PAYPAL_SANDBOX_MODE)
+        if self.sandbox_mode:
+            # Enforce sandbox endpoint in sandbox mode to prevent accidental live execution
+            self.base_url = "https://api-m.sandbox.paypal.com"
+        else:
+            # Production mode requires live API endpoint
+            configured_url = settings.PAYPAL_BASE_URL.rstrip("/")
+            if "sandbox" in configured_url.lower():
+                logger.warning("Production mode enabled but base URL contains 'sandbox'. Defaulting to live PayPal API.")
+                self.base_url = "https://api-m.paypal.com"
+            else:
+                self.base_url = configured_url
         self.client_id = settings.PAYPAL_CLIENT_ID
         self.client_secret = settings.PAYPAL_CLIENT_SECRET
 
