@@ -148,14 +148,11 @@ def verify_audit_hash_chain(
 ):
     """
     Validate the cryptographic SHA-256 hash chain across audit records.
-    Ensures no audit records have been altered, dropped, or tampered with.
+    Verifies the contiguous linear ledger so that records (including order-specific events)
+    are mathematically validated against tampering or record deletion.
     """
-    query = db.query(AuditLog).order_by(AuditLog.id.asc())
-    if order_id is not None:
-        query = query.filter(AuditLog.order_id == order_id)
-
-    logs = query.all()
-    if not logs:
+    all_logs = db.query(AuditLog).order_by(AuditLog.id.asc()).all()
+    if not all_logs:
         return {
             "status": "empty",
             "valid": True,
@@ -167,7 +164,7 @@ def verify_audit_hash_chain(
     break_index = None
     expected_prev = None
 
-    for idx, log in enumerate(logs):
+    for idx, log in enumerate(all_logs):
         details = log.details or {}
         if isinstance(details, dict) and "chain_hash" in details:
             if expected_prev is not None and details.get("previous_hash") != expected_prev:
@@ -176,7 +173,11 @@ def verify_audit_hash_chain(
                 break
             expected_prev = details.get("chain_hash")
 
-    head_log = logs[-1]
+    order_records_count = 0
+    if order_id is not None:
+        order_records_count = sum(1 for log in all_logs if log.order_id == order_id)
+
+    head_log = all_logs[-1]
     head_hash = (
         head_log.details.get("chain_hash")
         if (isinstance(head_log.details, dict) and head_log.details.get("chain_hash"))
@@ -186,7 +187,9 @@ def verify_audit_hash_chain(
     return {
         "status": "valid" if not chain_broken else "tampered",
         "valid": not chain_broken,
-        "total_records": len(logs),
+        "total_records": order_records_count if order_id is not None else len(all_logs),
+        "global_records": len(all_logs),
+        "order_records": order_records_count,
         "head_hash": head_hash,
         "break_at_index": break_index,
         "verification_protocol": "SHA-256 Tamper-Evident Ledger Chain",

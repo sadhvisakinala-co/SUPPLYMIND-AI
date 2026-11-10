@@ -219,6 +219,10 @@ def reset_demo_data(
         order.status = OrderStatus.PENDING_APPROVAL
         order.merchant_approved = False
         order.approved_at = None
+        order.actual_delivery = None
+        order.notes = "Expedited batch restock order. Priority freight lane reserved."
+        # Clear testing payments associated with this order
+        db.query(PaymentRecord).filter(PaymentRecord.order_id == order.id).delete()
 
     # Reset negotiation
     neg = db.query(Negotiation).filter(Negotiation.item_sku == "ELEC-005").first()
@@ -227,6 +231,22 @@ def reset_demo_data(
         neg.final_price = 122.50
 
     db.commit()
+
+    from app.routes.audit import create_audit_log
+    create_audit_log(
+        db=db,
+        user_id=current_user.id,
+        order_id=order.id if order else None,
+        action="demo_environment_reset",
+        entity_type="system",
+        entity_id=0,
+        details={
+            "sku": "ELEC-005",
+            "stock_restored": 0,
+            "order_number": "PO-2024-00892",
+            "status": "pending_approval",
+        },
+    )
 
     return {
         "status": "success",

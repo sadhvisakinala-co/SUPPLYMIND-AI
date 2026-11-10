@@ -1,0 +1,47 @@
+# Dependencies
+node_modules/
+venv/
+.venv/
+backend/venv/
+
+# Environment files
+.env
+.env.*
+!.env.example
+backend/.env
+backend/.env.*
+!backend/.env.example
+frontend/.env.local
+frontend/.env.*.local
+
+# Databases and SQLite
+*.db
+*.sqlite
+*.sqlite3
+backend/supplymind.db
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Next.js & Frontend builds
+frontend/.next/
+frontend/out/
+build/
+dist/
+
+# OS and IDE files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Temporary and Scratch
+scratch/
+tmp/
