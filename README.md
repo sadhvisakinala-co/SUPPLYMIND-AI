@@ -83,3 +83,4 @@ npm run start -- -p 3000
 - **Email**: `demo@supplymind.ai`
 - **Password**: `Demo@2024!`
 - **Merchant**: Alex Chen, TechFlow Electronics Ltd
+# SUPPLYMIND-AI
