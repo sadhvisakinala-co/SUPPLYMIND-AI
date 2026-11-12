@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { api } from "@/lib/api";
+import { useAuth } from "@/lib/auth-context";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import SmartWatchProductView from "@/components/dashboard/SmartWatchProductView";
@@ -23,6 +24,7 @@ import {
 } from "lucide-react";
 
 export default function OverviewPage() {
+  const { user } = useAuth();
   const [stats, setStats] = useState<any>(null);
   const [loading, setLoading] = useState(false);
 
@@ -54,7 +56,7 @@ export default function OverviewPage() {
             Autonomous Procurement Console
           </h1>
           <p className="text-xs sm:text-sm text-[#829DA8] mt-1.5 font-sans">
-            Merchant: <strong className="text-[#F2F0E9]">TechFlow Electronics Ltd</strong> · Alex Chen
+            Merchant: <strong className="text-[#F2F0E9]">{user?.company_name || "TechFlow Electronics Ltd"}</strong> · {user?.full_name || "Alex Chen"}
           </p>
         </div>
 
@@ -88,7 +90,7 @@ export default function OverviewPage() {
         <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#B9F12F] to-transparent" />
         <div className="absolute top-0 right-1/4 w-80 h-36 bg-[#B9F12F]/12 rounded-full blur-3xl pointer-events-none" />
 
-        <div className="relative z-10 grid grid-cols-1 lg:grid-cols-[minmax(0,5.2fr)_minmax(0,3fr)_minmax(0,1.8fr)] gap-5 lg:gap-6 items-center">
+        <div className="relative z-10 grid grid-cols-1 xl:grid-cols-[minmax(0,5.2fr)_minmax(0,3fr)_minmax(0,1.8fr)] gap-5 lg:gap-6 items-center">
           {/* Left Column: Badges, Title, Story & 4 Metrics (52%) */}
           <div className="min-w-0 w-full space-y-3 sm:space-y-3.5">
             <div className="flex flex-wrap items-center gap-2">
@@ -158,7 +160,7 @@ export default function OverviewPage() {
           </div>
 
           {/* Far-Right Column: Stacked Action Buttons (18%) */}
-          <div className="min-w-0 flex flex-col sm:flex-row lg:flex-col gap-2.5 justify-center w-full">
+          <div className="min-w-0 flex flex-col sm:flex-row xl:flex-col gap-2.5 justify-center w-full">
             <Link href="/dashboard/approval" className="w-full">
               <Button
                 size="sm"
@@ -268,13 +270,8 @@ export default function OverviewPage() {
 
           <div className="flex items-end justify-between gap-2 mt-3 min-w-0">
             <div className="min-w-0 flex-1">
-              <div className="flex flex-wrap items-center gap-1.5 leading-tight">
-                <span className="text-xl sm:text-2xl font-extrabold font-mono text-red-400 tracking-tight">
-                  Stockout
-                </span>
-                <span className="text-[10px] sm:text-xs font-mono font-semibold text-red-400/90 px-1.5 py-0.5 rounded bg-red-500/15 border border-red-500/30">
-                  Critical Low
-                </span>
+              <div className="text-xl sm:text-2xl font-extrabold font-mono text-red-400 tracking-tight leading-none break-words">
+                Stockout · Low
               </div>
               <div className="text-[11px] text-red-400/80 font-mono mt-1.5 leading-snug break-words">
                 ELEC-005, ELEC-001, ELEC-003
@@ -312,7 +309,7 @@ export default function OverviewPage() {
                 $4,850.00
               </div>
               <div className="text-xs text-[#B9F12F] font-mono mt-1.5 leading-snug break-words">
-                +6.13% avg concession yield
+                +6.13% average concession yield
               </div>
             </div>
 
@@ -375,7 +372,7 @@ export default function OverviewPage() {
 
               {/* Exact Data Table */}
               <div className="pt-3 overflow-x-auto">
-                <table className="w-full text-left border-collapse">
+                <table className="w-full min-w-[540px] text-left border-collapse">
                   <thead>
                     <tr className="border-b border-[rgba(242,240,233,0.08)] text-[10px] font-mono font-semibold text-[#829DA8] uppercase tracking-wider">
                       <th className="py-2.5 pr-3">SKU</th>

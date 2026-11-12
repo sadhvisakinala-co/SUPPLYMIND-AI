@@ -133,12 +133,12 @@ export default function SpendCategoryDonut() {
           </div>
         </div>
 
-        {/* Right: 3-Column Legend Breakdown (7 cols: Name, Pct, Amount) */}
+        {/* Right: 3-Column Legend Breakdown (Name, Pct, Amount) */}
         <div className="col-span-7 space-y-2 font-mono text-xs pl-2">
           {CATEGORIES.map((cat) => (
-            <div key={cat.name} className="grid grid-cols-12 items-center text-[11px]">
+            <div key={cat.name} className="flex items-center justify-between text-[11px] gap-2">
               {/* Category Name with Colored Indicator Dot */}
-              <div className="col-span-6 flex items-center gap-2">
+              <div className="flex items-center gap-1.5 min-w-0 flex-1">
                 <span
                   className="w-2 h-2 rounded-full shrink-0"
                   style={{ backgroundColor: cat.color }}
@@ -147,12 +147,12 @@ export default function SpendCategoryDonut() {
               </div>
 
               {/* Percentage */}
-              <div className="col-span-3 text-right text-[#F2F0E9] font-medium font-mono">
+              <div className="text-right text-[#F2F0E9] font-medium font-mono shrink-0 w-8">
                 {cat.pct}
               </div>
 
               {/* Dollar Amount */}
-              <div className="col-span-3 text-right text-[#AFC4CC] font-mono">
+              <div className="text-right text-[#AFC4CC] font-mono shrink-0 w-12">
                 {cat.amount}
               </div>
             </div>
