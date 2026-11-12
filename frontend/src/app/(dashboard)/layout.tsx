@@ -286,13 +286,13 @@ export default function DashboardLayout({
           </div>
 
           <div className="flex items-center gap-3">
-            <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#10394A]/90 border border-[rgba(150,215,222,0.25)] text-xs text-[#AFC4CC] font-mono">
+            <div className="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#10394A]/90 border border-[rgba(150,215,222,0.25)] text-xs text-[#AFC4CC] font-mono">
               <ShieldCheck className="w-3.5 h-3.5 text-[#B9F12F]" />
               <span>Merchant Sign-off Mandatory</span>
             </div>
 
             <Link href="/dashboard/approval">
-              <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#10394A]/90 border border-[rgba(150,215,222,0.25)] hover:border-[#B9F12F]/40 text-xs text-[#F2F0E9] font-mono transition-colors cursor-pointer">
+              <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#10394A]/90 border border-[rgba(150,215,222,0.25)] hover:border-[#B9F12F]/40 text-xs text-[#F2F0E9] font-mono transition-colors cursor-pointer shrink-0">
                 <span className="w-2 h-2 rounded-full bg-[#B9F12F] shadow-[0_0_6px_#B9F12F]" />
                 <span>1 Pending PO</span>
               </div>

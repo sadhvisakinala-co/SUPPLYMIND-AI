@@ -109,44 +109,44 @@ export default function OverviewPage() {
             </p>
 
             {/* 4 Metric Boxes in a responsive grid */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-3 border-t border-[rgba(242,240,233,0.1)] text-xs font-mono">
-              <div className="flex items-center gap-2.5 min-w-0">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3 pt-3 border-t border-[rgba(242,240,233,0.1)] text-xs font-mono">
+              <div className="flex items-center gap-2 min-w-0">
                 <div className="w-7 h-7 rounded-lg bg-[#164657] flex items-center justify-center text-[#B9F12F] shrink-0">
                   <Boxes className="w-3.5 h-3.5" />
                 </div>
                 <div className="min-w-0">
-                  <div className="text-[10px] text-[#829DA8] uppercase font-sans leading-tight truncate">Recommended Restock</div>
-                  <div className="text-xs sm:text-sm font-bold text-[#F2F0E9] truncate">150 Units</div>
+                  <div className="text-[9px] sm:text-[10px] text-[#829DA8] uppercase font-sans leading-tight">Recommended Restock</div>
+                  <div className="text-xs sm:text-sm font-bold text-[#F2F0E9]">150 Units</div>
                 </div>
               </div>
 
-              <div className="flex items-center gap-2.5 min-w-0">
+              <div className="flex items-center gap-2 min-w-0">
                 <div className="w-7 h-7 rounded-lg bg-[#164657] flex items-center justify-center text-[#B9F12F] shrink-0">
                   <Layers className="w-3.5 h-3.5" />
                 </div>
                 <div className="min-w-0">
-                  <div className="text-[10px] text-[#829DA8] uppercase font-sans leading-tight truncate">Negotiated Total</div>
-                  <div className="text-xs sm:text-sm font-bold text-[#F2F0E9] truncate">$19,643.75</div>
+                  <div className="text-[9px] sm:text-[10px] text-[#829DA8] uppercase font-sans leading-tight">Negotiated Total</div>
+                  <div className="text-xs sm:text-sm font-bold text-[#F2F0E9]">$19,643.75</div>
                 </div>
               </div>
 
-              <div className="flex items-center gap-2.5 min-w-0">
+              <div className="flex items-center gap-2 min-w-0">
                 <div className="w-7 h-7 rounded-lg bg-[#164657] flex items-center justify-center text-[#B9F12F] shrink-0">
                   <Clock className="w-3.5 h-3.5" />
                 </div>
                 <div className="min-w-0">
-                  <div className="text-[10px] text-[#829DA8] uppercase font-sans leading-tight truncate">Lead Time</div>
-                  <div className="text-xs sm:text-sm font-bold text-[#F2F0E9] truncate">14 Days (Expedited)</div>
+                  <div className="text-[9px] sm:text-[10px] text-[#829DA8] uppercase font-sans leading-tight">Lead Time</div>
+                  <div className="text-xs sm:text-sm font-bold text-[#F2F0E9]">14 Days (Expedited)</div>
                 </div>
               </div>
 
-              <div className="flex items-center gap-2.5 min-w-0">
+              <div className="flex items-center gap-2 min-w-0">
                 <div className="w-7 h-7 rounded-lg bg-[#164657] flex items-center justify-center text-[#B9F12F] shrink-0">
                   <TrendingUp className="w-3.5 h-3.5" />
                 </div>
                 <div className="min-w-0">
-                  <div className="text-[10px] text-[#829DA8] uppercase font-sans leading-tight truncate">Cost Savings</div>
-                  <div className="text-xs sm:text-sm font-bold text-[#F2F0E9] truncate">$1,200.00 (6.13% vs quote)</div>
+                  <div className="text-[9px] sm:text-[10px] text-[#829DA8] uppercase font-sans leading-tight">Cost Savings</div>
+                  <div className="text-xs sm:text-sm font-bold text-[#F2F0E9]">$1,200.00 (6.13%)</div>
                 </div>
               </div>
             </div>
@@ -165,7 +165,7 @@ export default function OverviewPage() {
                 className="w-full h-10 gap-2 bg-[#B9F12F] hover:bg-[#bef264] text-[#071F30] font-sans text-xs font-bold rounded-xl shadow-[0_0_20px_rgba(185,241,47,0.4)] transition-all hover:scale-[1.02] active:scale-[0.98]"
               >
                 <CheckCircle2 className="w-4 h-4 stroke-[2.5]" />
-                <span className="truncate">Review &amp; Approve PO</span>
+                <span>Review &amp; Approve PO</span>
               </Button>
             </Link>
 
@@ -176,7 +176,7 @@ export default function OverviewPage() {
                 className="w-full h-10 gap-2 text-xs font-sans font-medium bg-[#071F30]/90 hover:bg-[#164657] text-[#F2F0E9] border border-[rgba(150,215,222,0.25)] rounded-xl transition-all hover:scale-[1.02] active:scale-[0.98]"
               >
                 <FileText className="w-3.5 h-3.5 text-[#AFC4CC]" />
-                <span className="truncate">Inspect AI Transcript</span>
+                <span>Inspect AI Transcript</span>
               </Button>
             </Link>
           </div>
@@ -191,14 +191,14 @@ export default function OverviewPage() {
             <div className="w-8 h-8 rounded-lg bg-[#164657] border border-[#B9F12F]/30 flex items-center justify-center text-[#B9F12F] shrink-0">
               <Boxes className="w-4 h-4" />
             </div>
-            <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-[#AFC4CC] truncate">
+            <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-[#AFC4CC]">
               TOTAL SKUS MONITORED
             </span>
           </div>
 
           <div className="flex items-end justify-between gap-2 mt-3 min-w-0">
             <div className="min-w-0 flex-1">
-              <div className="text-2xl sm:text-3xl font-extrabold font-mono text-[#F2F0E9] tracking-tight leading-none truncate">
+              <div className="text-2xl sm:text-3xl font-extrabold font-mono text-[#F2F0E9] tracking-tight leading-none">
                 {stats ? stats.total_items : 20}
               </div>
               <div className="text-xs text-[#B9F12F] font-mono mt-1.5 leading-snug break-words">
@@ -207,7 +207,7 @@ export default function OverviewPage() {
             </div>
 
             {/* Neon Green SVG Sparkline */}
-            <div className="w-20 sm:w-24 h-8 pb-0.5 shrink-0">
+            <div className="w-16 sm:w-20 h-7 pb-0.5 shrink-0">
               <svg viewBox="0 0 96 32" fill="none" className="w-full h-full">
                 <path
                   d="M0 26 C 24 28, 36 16, 60 18 C 78 20, 84 8, 96 4"
@@ -226,14 +226,14 @@ export default function OverviewPage() {
             <div className="w-8 h-8 rounded-lg bg-[#164657] border border-[#B9F12F]/30 flex items-center justify-center text-[#B9F12F] shrink-0">
               <Layers className="w-4 h-4" />
             </div>
-            <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-[#AFC4CC] truncate">
+            <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-[#AFC4CC]">
               INVENTORY VALUE
             </span>
           </div>
 
           <div className="flex items-end justify-between gap-2 mt-3 min-w-0">
             <div className="min-w-0 flex-1">
-              <div className="text-2xl sm:text-3xl font-extrabold font-mono text-[#F2F0E9] tracking-tight leading-none truncate">
+              <div className="text-xl sm:text-2xl font-extrabold font-mono text-[#F2F0E9] tracking-tight leading-none">
                 ${stats ? stats.total_inventory_value?.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 }) : "19,253.50"}
               </div>
               <div className="text-xs text-[#B9F12F] font-mono mt-1.5 leading-snug break-words">
@@ -242,7 +242,7 @@ export default function OverviewPage() {
             </div>
 
             {/* Neon Green SVG Sparkline */}
-            <div className="w-20 sm:w-24 h-8 pb-0.5 shrink-0">
+            <div className="w-16 sm:w-20 h-7 pb-0.5 shrink-0">
               <svg viewBox="0 0 96 32" fill="none" className="w-full h-full">
                 <path
                   d="M0 24 C 20 26, 32 30, 50 18 C 68 8, 80 14, 96 6"
@@ -261,7 +261,7 @@ export default function OverviewPage() {
             <div className="w-8 h-8 rounded-lg bg-red-950/60 border border-red-500/30 flex items-center justify-center text-red-400 shrink-0">
               <AlertTriangle className="w-4 h-4" />
             </div>
-            <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-red-400 truncate">
+            <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-red-400">
               RISK / STOCKOUTS
             </span>
           </div>
@@ -282,7 +282,7 @@ export default function OverviewPage() {
             </div>
 
             {/* Coral-Red SVG Sparkline */}
-            <div className="w-20 sm:w-24 h-8 pb-0.5 shrink-0">
+            <div className="w-16 sm:w-20 h-7 pb-0.5 shrink-0">
               <svg viewBox="0 0 96 32" fill="none" className="w-full h-full">
                 <path
                   d="M0 22 C 18 20, 32 28, 48 24 C 64 20, 78 28, 96 22"
@@ -301,14 +301,14 @@ export default function OverviewPage() {
             <div className="w-8 h-8 rounded-lg bg-[#164657] border border-[#B9F12F]/30 flex items-center justify-center text-[#B9F12F] shrink-0">
               <TrendingUp className="w-4 h-4" />
             </div>
-            <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-[#AFC4CC] truncate">
+            <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-[#AFC4CC]">
               AI MARGIN SAVINGS
             </span>
           </div>
 
           <div className="flex items-end justify-between gap-2 mt-3 min-w-0">
             <div className="min-w-0 flex-1">
-              <div className="text-2xl sm:text-3xl font-extrabold font-mono text-[#F2F0E9] tracking-tight leading-none truncate">
+              <div className="text-xl sm:text-2xl font-extrabold font-mono text-[#F2F0E9] tracking-tight leading-none">
                 $4,850.00
               </div>
               <div className="text-xs text-[#B9F12F] font-mono mt-1.5 leading-snug break-words">
@@ -317,7 +317,7 @@ export default function OverviewPage() {
             </div>
 
             {/* Neon Green SVG Sparkline */}
-            <div className="w-20 sm:w-24 h-8 pb-0.5 shrink-0">
+            <div className="w-16 sm:w-20 h-7 pb-0.5 shrink-0">
               <svg viewBox="0 0 96 32" fill="none" className="w-full h-full">
                 <path
                   d="M0 26 C 24 24, 40 28, 60 14 C 74 4, 84 12, 96 8"
