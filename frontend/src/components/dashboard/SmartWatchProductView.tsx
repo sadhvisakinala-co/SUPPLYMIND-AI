@@ -42,18 +42,18 @@ export default function SmartWatchProductView() {
   return (
     <div
       ref={containerRef}
-      className="relative w-full flex flex-col items-center justify-center select-none py-1 group overflow-visible"
+      className="relative w-full flex flex-col items-center justify-center select-none py-1 group overflow-visible min-w-0"
     >
       {/* ─── 1. ATMOSPHERIC RADIAL BACKLIGHT (CYAN & LIME DIFFUSION) ─────────── */}
-      <div className="absolute -inset-8 bg-[radial-gradient(ellipse_at_center,rgba(56,189,248,0.15)_0%,rgba(185,241,47,0.08)_40%,transparent_70%)] blur-3xl pointer-events-none" />
+      <div className="absolute -inset-6 bg-[radial-gradient(ellipse_at_center,rgba(56,189,248,0.15)_0%,rgba(185,241,47,0.08)_40%,transparent_70%)] blur-2xl pointer-events-none" />
 
       {/* ─── 2. PEDESTAL BASE LIGHT SPILL & SOFT CONTACT SHADOW ─────────────── */}
-      <div className="absolute bottom-2 w-72 sm:w-80 h-16 rounded-full bg-[radial-gradient(ellipse_at_center,rgba(185,241,47,0.42)_0%,rgba(185,241,47,0.14)_45%,transparent_75%)] blur-xl pointer-events-none transition-opacity duration-1000 opacity-90 group-hover:opacity-100" />
-      <div className="absolute bottom-1 w-64 sm:w-72 h-9 rounded-full bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.65)_0%,transparent_70%)] blur-md pointer-events-none" />
+      <div className="absolute bottom-2 w-48 sm:w-64 h-12 rounded-full bg-[radial-gradient(ellipse_at_center,rgba(185,241,47,0.42)_0%,rgba(185,241,47,0.14)_45%,transparent_75%)] blur-lg pointer-events-none transition-opacity duration-1000 opacity-90 group-hover:opacity-100" />
+      <div className="absolute bottom-1 w-40 sm:w-56 h-8 rounded-full bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.65)_0%,transparent_70%)] blur-md pointer-events-none" />
 
       {/* ─── 3. HIGH-RESOLUTION STUDIO SMARTWATCH ON GLOWING PEDESTAL ──────── */}
       <div
-        className="relative z-10 w-72 sm:w-80 lg:w-[340px] xl:w-[380px] h-60 sm:h-68 lg:h-72 flex items-center justify-center transition-transform duration-300 ease-out animate-product-float"
+        className="relative z-10 w-full max-w-[260px] sm:max-w-[300px] lg:max-w-[320px] h-52 sm:h-64 lg:h-72 flex items-center justify-center transition-transform duration-300 ease-out animate-product-float"
         style={{
           transform: `translate3d(${parallax.x}px, ${parallax.y}px, 0)`,
         }}
@@ -61,7 +61,7 @@ export default function SmartWatchProductView() {
         <img
           src="/smartwatch_studio_hero.png"
           alt="Smart Watch Ultra Titanium (GPS + Cellular)"
-          className="w-full h-full object-contain pointer-events-none filter brightness-[1.03] contrast-[1.02] select-none"
+          className="w-full h-full max-h-full object-contain pointer-events-none filter brightness-[1.03] contrast-[1.02] select-none"
         />
       </div>
     </div>

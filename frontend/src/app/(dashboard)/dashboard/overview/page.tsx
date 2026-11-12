@@ -44,45 +44,13 @@ export default function OverviewPage() {
 
   return (
     <div className="space-y-6 animate-fade-in font-sans pb-12">
-      {/* ─── 1. DASHBOARD HEADER WITH FLOWING NEON WAVE ─────────────────────── */}
+      {/* ─── 1. DASHBOARD HEADER ────────────────────────────────────────────── */}
       <div className="relative flex flex-col md:flex-row md:items-center justify-between gap-4 pt-1">
-        {/* Subtle decorative neon wave light trail in background */}
-        <div className="absolute right-40 -top-6 w-[640px] h-32 pointer-events-none opacity-60 overflow-hidden hidden lg:block">
-          <svg viewBox="0 0 640 100" fill="none" className="w-full h-full">
-            <defs>
-              <linearGradient id="waveGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stopColor="#B9F12F" stopOpacity="0" />
-                <stop offset="35%" stopColor="#B9F12F" stopOpacity="0.85" />
-                <stop offset="70%" stopColor="#38BDF8" stopOpacity="0.65" />
-                <stop offset="100%" stopColor="#B9F12F" stopOpacity="0" />
-              </linearGradient>
-            </defs>
-            <path
-              d="M0 65 C 150 15, 290 85, 440 35 C 510 12, 580 30, 640 22"
-              stroke="url(#waveGrad)"
-              strokeWidth="2.2"
-              strokeDasharray="4 4"
-            />
-            <path
-              d="M20 75 C 170 25, 310 95, 460 42 C 520 18, 590 34, 640 26"
-              stroke="#B9F12F"
-              strokeWidth="1.2"
-              strokeOpacity="0.45"
-            />
-            <path
-              d="M40 85 C 190 35, 330 105, 480 50 C 540 24, 600 38, 640 30"
-              stroke="#38BDF8"
-              strokeWidth="0.9"
-              strokeOpacity="0.3"
-            />
-          </svg>
-        </div>
-
         <div>
           <div className="text-[11px] font-mono font-bold text-[#B9F12F] uppercase tracking-wider mb-1">
             REAL-TIME ENTERPRISE TELEMETRY
           </div>
-          <h1 className="font-display font-extrabold text-3xl sm:text-[34px] text-[#F2F0E9] tracking-tight leading-none">
+          <h1 className="font-display font-extrabold text-3xl sm:text-[34px] text-[#F2F0E9] tracking-tight leading-tight">
             Autonomous Procurement Console
           </h1>
           <p className="text-xs sm:text-sm text-[#829DA8] mt-1.5 font-sans">
@@ -114,15 +82,15 @@ export default function OverviewPage() {
         </div>
       </div>
 
-      {/* ─── 2. CRITICAL STOCKOUT HERO PANEL (MATCHING REFERENCE EXACTLY) ─── */}
-      <div className="relative rounded-2xl border border-[rgba(150,215,222,0.25)] bg-gradient-to-r from-[#072438] via-[#0E3547] to-[#071F30] p-6 sm:p-7 shadow-[0_0_35px_rgba(185,241,47,0.14)] overflow-hidden">
+      {/* ─── 2. CRITICAL STOCKOUT HERO PANEL ───────────────────────────────── */}
+      <div className="relative rounded-2xl border border-[rgba(150,215,222,0.25)] bg-gradient-to-r from-[#072438] via-[#0E3547] to-[#071F30] p-5 sm:p-6 lg:p-7 shadow-[0_0_35px_rgba(185,241,47,0.14)] overflow-hidden">
         {/* Top edge neon lime accent line with ambient glow */}
         <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#B9F12F] to-transparent" />
         <div className="absolute top-0 right-1/4 w-80 h-36 bg-[#B9F12F]/12 rounded-full blur-3xl pointer-events-none" />
 
-        <div className="relative z-10 grid grid-cols-1 xl:grid-cols-12 gap-5 items-center">
-          {/* Left Column: Badges, Title, Story & 4 Metrics (6 cols) */}
-          <div className="xl:col-span-6 space-y-3">
+        <div className="relative z-10 grid grid-cols-1 lg:grid-cols-[minmax(0,5.2fr)_minmax(0,3fr)_minmax(0,1.8fr)] gap-5 lg:gap-6 items-center">
+          {/* Left Column: Badges, Title, Story & 4 Metrics (52%) */}
+          <div className="min-w-0 w-full space-y-3 sm:space-y-3.5">
             <div className="flex flex-wrap items-center gap-2">
               <span className="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold tracking-wider bg-red-500/25 text-red-400 border border-red-500/40">
                 CRITICAL STOCKOUT DETECTED
@@ -132,72 +100,72 @@ export default function OverviewPage() {
               </span>
             </div>
 
-            <h2 className="font-display font-extrabold text-xl sm:text-2xl text-[#F2F0E9] tracking-tight break-words sm:whitespace-nowrap">
+            <h2 className="font-display font-extrabold text-xl sm:text-2xl lg:text-[26px] xl:text-[28px] text-[#F2F0E9] tracking-tight leading-[1.2] break-words">
               Smart Watch Ultra Titanium (GPS + Cellular)
             </h2>
 
-            <p className="text-xs sm:text-sm text-[#AFC4CC] leading-relaxed font-sans max-w-xl">
-              Current inventory reached <strong className="text-red-400 font-mono font-bold">0 units</strong> with an active velocity drain of <strong className="text-[#F2F0E9] font-mono font-bold">8.4 units/day</strong>. Estimated daily revenue forfeiture: <strong className="text-red-400 font-mono font-bold">$2,931.60</strong>. An autonomous counteroffer was negotiated with TechSource Global Ltd at <strong className="text-[#B9F12F] font-mono font-bold">$122.50/unit</strong> (saving $1,200.00).
+            <p className="text-xs sm:text-sm text-[#AFC4CC] leading-relaxed font-sans max-w-xl break-words">
+              Current inventory reached <strong className="text-red-400 font-mono font-bold">0 units</strong> with an active velocity drain of <strong className="text-[#F2F0E9] font-mono font-bold">8.4 units/day</strong>. Estimated daily revenue forfeiture: <strong className="text-red-400 font-mono font-bold">$2,931.60</strong>. An autonomous counteroffer was negotiated with TechSource Global Ltd at <strong className="text-[#B9F12F] font-mono font-bold">$122.50/unit</strong> (saving $1,200.00 vs quote).
             </p>
 
-            {/* 4 Metric Boxes in a single horizontal row */}
+            {/* 4 Metric Boxes in a responsive grid */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-3 border-t border-[rgba(242,240,233,0.1)] text-xs font-mono">
-              <div className="flex items-center gap-2.5">
+              <div className="flex items-center gap-2.5 min-w-0">
                 <div className="w-7 h-7 rounded-lg bg-[#164657] flex items-center justify-center text-[#B9F12F] shrink-0">
                   <Boxes className="w-3.5 h-3.5" />
                 </div>
-                <div>
-                  <div className="text-[10px] text-[#829DA8] uppercase font-sans leading-tight">Recommended Restock</div>
-                  <div className="text-xs sm:text-sm font-bold text-[#F2F0E9]">150 Units</div>
+                <div className="min-w-0">
+                  <div className="text-[10px] text-[#829DA8] uppercase font-sans leading-tight truncate">Recommended Restock</div>
+                  <div className="text-xs sm:text-sm font-bold text-[#F2F0E9] truncate">150 Units</div>
                 </div>
               </div>
 
-              <div className="flex items-center gap-2.5">
+              <div className="flex items-center gap-2.5 min-w-0">
                 <div className="w-7 h-7 rounded-lg bg-[#164657] flex items-center justify-center text-[#B9F12F] shrink-0">
                   <Layers className="w-3.5 h-3.5" />
                 </div>
-                <div>
-                  <div className="text-[10px] text-[#829DA8] uppercase font-sans leading-tight">Negotiated Total</div>
-                  <div className="text-xs sm:text-sm font-bold text-[#F2F0E9]">$19,643.75</div>
+                <div className="min-w-0">
+                  <div className="text-[10px] text-[#829DA8] uppercase font-sans leading-tight truncate">Negotiated Total</div>
+                  <div className="text-xs sm:text-sm font-bold text-[#F2F0E9] truncate">$19,643.75</div>
                 </div>
               </div>
 
-              <div className="flex items-center gap-2.5">
+              <div className="flex items-center gap-2.5 min-w-0">
                 <div className="w-7 h-7 rounded-lg bg-[#164657] flex items-center justify-center text-[#B9F12F] shrink-0">
                   <Clock className="w-3.5 h-3.5" />
                 </div>
-                <div>
-                  <div className="text-[10px] text-[#829DA8] uppercase font-sans leading-tight">Lead Time</div>
-                  <div className="text-xs sm:text-sm font-bold text-[#F2F0E9]">14 Days (Expedited)</div>
+                <div className="min-w-0">
+                  <div className="text-[10px] text-[#829DA8] uppercase font-sans leading-tight truncate">Lead Time</div>
+                  <div className="text-xs sm:text-sm font-bold text-[#F2F0E9] truncate">14 Days (Expedited)</div>
                 </div>
               </div>
 
-              <div className="flex items-center gap-2.5">
+              <div className="flex items-center gap-2.5 min-w-0">
                 <div className="w-7 h-7 rounded-lg bg-[#164657] flex items-center justify-center text-[#B9F12F] shrink-0">
                   <TrendingUp className="w-3.5 h-3.5" />
                 </div>
-                <div>
-                  <div className="text-[10px] text-[#829DA8] uppercase font-sans leading-tight">Cost Savings</div>
-                  <div className="text-xs sm:text-sm font-bold text-[#F2F0E9]">$1,200.00 (6.13%)</div>
+                <div className="min-w-0">
+                  <div className="text-[10px] text-[#829DA8] uppercase font-sans leading-tight truncate">Cost Savings</div>
+                  <div className="text-xs sm:text-sm font-bold text-[#F2F0E9] truncate">$1,200.00 (6.13% vs quote)</div>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Center-Right Column: Smart Watch on Glowing Ring (4 cols) */}
-          <div className="xl:col-span-4 flex items-center justify-center relative min-h-[250px]">
+          {/* Center Column: Smart Watch Visual (30%) */}
+          <div className="min-w-0 flex items-center justify-center relative min-h-[220px] sm:min-h-[260px]">
             <SmartWatchProductView />
           </div>
 
-          {/* Far-Right Column: Stacked Action Buttons (2 cols) */}
-          <div className="xl:col-span-2 flex flex-col gap-3 justify-center">
+          {/* Far-Right Column: Stacked Action Buttons (18%) */}
+          <div className="min-w-0 flex flex-col sm:flex-row lg:flex-col gap-2.5 justify-center w-full">
             <Link href="/dashboard/approval" className="w-full">
               <Button
                 size="sm"
-                className="w-full h-10 gap-2 bg-[#B9F12F] hover:bg-[#bef264] text-[#071F30] font-sans text-xs font-bold rounded-xl shadow-[0_0_20px_rgba(185,241,47,0.4)] transition-all hover:scale-105 active:scale-95"
+                className="w-full h-10 gap-2 bg-[#B9F12F] hover:bg-[#bef264] text-[#071F30] font-sans text-xs font-bold rounded-xl shadow-[0_0_20px_rgba(185,241,47,0.4)] transition-all hover:scale-[1.02] active:scale-[0.98]"
               >
                 <CheckCircle2 className="w-4 h-4 stroke-[2.5]" />
-                <span>Review &amp; Approve PO</span>
+                <span className="truncate">Review &amp; Approve PO</span>
               </Button>
             </Link>
 
@@ -205,10 +173,10 @@ export default function OverviewPage() {
               <Button
                 variant="secondary"
                 size="sm"
-                className="w-full h-10 gap-2 text-xs font-sans font-medium bg-[#071F30]/90 hover:bg-[#164657] text-[#F2F0E9] border border-[rgba(150,215,222,0.25)] rounded-xl transition-all"
+                className="w-full h-10 gap-2 text-xs font-sans font-medium bg-[#071F30]/90 hover:bg-[#164657] text-[#F2F0E9] border border-[rgba(150,215,222,0.25)] rounded-xl transition-all hover:scale-[1.02] active:scale-[0.98]"
               >
                 <FileText className="w-3.5 h-3.5 text-[#AFC4CC]" />
-                <span>Inspect AI Transcript</span>
+                <span className="truncate">Inspect AI Transcript</span>
               </Button>
             </Link>
           </div>
@@ -216,30 +184,30 @@ export default function OverviewPage() {
       </div>
 
       {/* ─── 3. TOP 4 KPI METRIC TILES WITH SPARKLINES ────────────────────── */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         {/* KPI 1: TOTAL SKUS MONITORED */}
-        <Card className="p-5 rounded-2xl bg-[#10394A] border border-[rgba(150,215,222,0.25)] hover:border-[#B9F12F]/40 transition-all duration-300 shadow-xl flex flex-col justify-between h-[130px]">
-          <div className="flex items-center gap-2.5">
+        <Card className="p-4 sm:p-5 rounded-2xl bg-[#10394A] border border-[rgba(150,215,222,0.25)] hover:border-[#B9F12F]/40 transition-all duration-300 shadow-xl flex flex-col justify-between min-h-[148px] h-full min-w-0">
+          <div className="flex items-center gap-2.5 min-w-0">
             <div className="w-8 h-8 rounded-lg bg-[#164657] border border-[#B9F12F]/30 flex items-center justify-center text-[#B9F12F] shrink-0">
               <Boxes className="w-4 h-4" />
             </div>
-            <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-[#AFC4CC]">
+            <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-[#AFC4CC] truncate">
               TOTAL SKUS MONITORED
             </span>
           </div>
 
-          <div className="flex items-end justify-between">
-            <div>
-              <div className="text-3xl font-extrabold font-mono text-[#F2F0E9] tracking-tight leading-none">
+          <div className="flex items-end justify-between gap-2 mt-3 min-w-0">
+            <div className="min-w-0 flex-1">
+              <div className="text-2xl sm:text-3xl font-extrabold font-mono text-[#F2F0E9] tracking-tight leading-none truncate">
                 {stats ? stats.total_items : 20}
               </div>
-              <div className="text-xs text-[#B9F12F] font-mono mt-1.5">
+              <div className="text-xs text-[#B9F12F] font-mono mt-1.5 leading-snug break-words">
                 +5.3% vs. last 7 days
               </div>
             </div>
 
             {/* Neon Green SVG Sparkline */}
-            <div className="w-24 h-8 pb-0.5">
+            <div className="w-20 sm:w-24 h-8 pb-0.5 shrink-0">
               <svg viewBox="0 0 96 32" fill="none" className="w-full h-full">
                 <path
                   d="M0 26 C 24 28, 36 16, 60 18 C 78 20, 84 8, 96 4"
@@ -253,28 +221,28 @@ export default function OverviewPage() {
         </Card>
 
         {/* KPI 2: INVENTORY VALUE */}
-        <Card className="p-5 rounded-2xl bg-[#10394A] border border-[rgba(150,215,222,0.25)] hover:border-[#B9F12F]/40 transition-all duration-300 shadow-xl flex flex-col justify-between h-[130px]">
-          <div className="flex items-center gap-2.5">
+        <Card className="p-4 sm:p-5 rounded-2xl bg-[#10394A] border border-[rgba(150,215,222,0.25)] hover:border-[#B9F12F]/40 transition-all duration-300 shadow-xl flex flex-col justify-between min-h-[148px] h-full min-w-0">
+          <div className="flex items-center gap-2.5 min-w-0">
             <div className="w-8 h-8 rounded-lg bg-[#164657] border border-[#B9F12F]/30 flex items-center justify-center text-[#B9F12F] shrink-0">
               <Layers className="w-4 h-4" />
             </div>
-            <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-[#AFC4CC]">
+            <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-[#AFC4CC] truncate">
               INVENTORY VALUE
             </span>
           </div>
 
-          <div className="flex items-end justify-between">
-            <div>
-              <div className="text-3xl font-extrabold font-mono text-[#F2F0E9] tracking-tight leading-none">
-                ${stats ? stats.total_inventory_value?.toLocaleString(undefined, { minimumFractionDigits: 1, maximumFractionDigits: 1 }) : "19,253.5"}
+          <div className="flex items-end justify-between gap-2 mt-3 min-w-0">
+            <div className="min-w-0 flex-1">
+              <div className="text-2xl sm:text-3xl font-extrabold font-mono text-[#F2F0E9] tracking-tight leading-none truncate">
+                ${stats ? stats.total_inventory_value?.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 }) : "19,253.50"}
               </div>
-              <div className="text-xs text-[#B9F12F] font-mono mt-1.5">
+              <div className="text-xs text-[#B9F12F] font-mono mt-1.5 leading-snug break-words">
                 +12.8% vs. last month
               </div>
             </div>
 
             {/* Neon Green SVG Sparkline */}
-            <div className="w-24 h-8 pb-0.5">
+            <div className="w-20 sm:w-24 h-8 pb-0.5 shrink-0">
               <svg viewBox="0 0 96 32" fill="none" className="w-full h-full">
                 <path
                   d="M0 24 C 20 26, 32 30, 50 18 C 68 8, 80 14, 96 6"
@@ -287,29 +255,34 @@ export default function OverviewPage() {
           </div>
         </Card>
 
-        {/* KPI 3: RISK / STOCKOUTS (With Coral Sparkline matching reference) */}
-        <Card className="p-5 rounded-2xl bg-[#10394A] border border-red-500/35 hover:border-red-500/55 transition-all duration-300 shadow-xl flex flex-col justify-between h-[130px]">
-          <div className="flex items-center gap-2.5">
+        {/* KPI 3: RISK / STOCKOUTS */}
+        <Card className="p-4 sm:p-5 rounded-2xl bg-[#10394A] border border-red-500/35 hover:border-red-500/55 transition-all duration-300 shadow-xl flex flex-col justify-between min-h-[148px] h-full min-w-0">
+          <div className="flex items-center gap-2.5 min-w-0">
             <div className="w-8 h-8 rounded-lg bg-red-950/60 border border-red-500/30 flex items-center justify-center text-red-400 shrink-0">
               <AlertTriangle className="w-4 h-4" />
             </div>
-            <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-red-400">
+            <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-red-400 truncate">
               RISK / STOCKOUTS
             </span>
           </div>
 
-          <div className="flex items-end justify-between">
-            <div>
-              <div className="text-2xl font-extrabold font-mono text-red-400 tracking-tight leading-none">
-                Stockout · Low
+          <div className="flex items-end justify-between gap-2 mt-3 min-w-0">
+            <div className="min-w-0 flex-1">
+              <div className="flex flex-wrap items-center gap-1.5 leading-tight">
+                <span className="text-xl sm:text-2xl font-extrabold font-mono text-red-400 tracking-tight">
+                  Stockout
+                </span>
+                <span className="text-[10px] sm:text-xs font-mono font-semibold text-red-400/90 px-1.5 py-0.5 rounded bg-red-500/15 border border-red-500/30">
+                  Critical Low
+                </span>
               </div>
-              <div className="text-xs text-red-400/80 font-mono mt-1.5">
+              <div className="text-[11px] text-red-400/80 font-mono mt-1.5 leading-snug break-words">
                 ELEC-005, ELEC-001, ELEC-003
               </div>
             </div>
 
             {/* Coral-Red SVG Sparkline */}
-            <div className="w-24 h-8 pb-0.5">
+            <div className="w-20 sm:w-24 h-8 pb-0.5 shrink-0">
               <svg viewBox="0 0 96 32" fill="none" className="w-full h-full">
                 <path
                   d="M0 22 C 18 20, 32 28, 48 24 C 64 20, 78 28, 96 22"
@@ -323,28 +296,28 @@ export default function OverviewPage() {
         </Card>
 
         {/* KPI 4: AI MARGIN SAVINGS */}
-        <Card className="p-5 rounded-2xl bg-[#10394A] border border-[rgba(150,215,222,0.25)] hover:border-[#B9F12F]/40 transition-all duration-300 shadow-xl flex flex-col justify-between h-[130px]">
-          <div className="flex items-center gap-2.5">
+        <Card className="p-4 sm:p-5 rounded-2xl bg-[#10394A] border border-[rgba(150,215,222,0.25)] hover:border-[#B9F12F]/40 transition-all duration-300 shadow-xl flex flex-col justify-between min-h-[148px] h-full min-w-0">
+          <div className="flex items-center gap-2.5 min-w-0">
             <div className="w-8 h-8 rounded-lg bg-[#164657] border border-[#B9F12F]/30 flex items-center justify-center text-[#B9F12F] shrink-0">
               <TrendingUp className="w-4 h-4" />
             </div>
-            <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-[#AFC4CC]">
+            <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-[#AFC4CC] truncate">
               AI MARGIN SAVINGS
             </span>
           </div>
 
-          <div className="flex items-end justify-between">
-            <div>
-              <div className="text-3xl font-extrabold font-mono text-[#F2F0E9] tracking-tight leading-none">
+          <div className="flex items-end justify-between gap-2 mt-3 min-w-0">
+            <div className="min-w-0 flex-1">
+              <div className="text-2xl sm:text-3xl font-extrabold font-mono text-[#F2F0E9] tracking-tight leading-none truncate">
                 $4,850.00
               </div>
-              <div className="text-xs text-[#B9F12F] font-mono mt-1.5">
-                +6.13% average concession yield
+              <div className="text-xs text-[#B9F12F] font-mono mt-1.5 leading-snug break-words">
+                +6.13% avg concession yield
               </div>
             </div>
 
             {/* Neon Green SVG Sparkline */}
-            <div className="w-24 h-8 pb-0.5">
+            <div className="w-20 sm:w-24 h-8 pb-0.5 shrink-0">
               <svg viewBox="0 0 96 32" fill="none" className="w-full h-full">
                 <path
                   d="M0 26 C 24 24, 40 28, 60 14 C 74 4, 84 12, 96 8"
