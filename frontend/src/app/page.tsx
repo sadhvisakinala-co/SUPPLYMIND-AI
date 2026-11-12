@@ -476,7 +476,7 @@ export default function LandingPage() {
               </div>
 
               {/* Message 2: AI Counter */}
-              <div className="p-4 rounded-xl bg-surface border border-electric-teal/30 ml-4 sm:ml-8">
+              <div className="p-4 rounded-xl bg-surface border border-electric-teal/30">
                 <div className="flex items-center justify-between text-xs mb-2">
                   <span className="font-semibold text-electric-teal flex items-center gap-1.5">
                     <Sparkles className="w-3.5 h-3.5" /> SUPPLYMIND Autonomous Agent
